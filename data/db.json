@@ -1,0 +1,28 @@
+{
+  "blogs": [
+    {
+      "id": "7343",
+      "title": "Tech World",
+      "body": "Welcome to tech world, where you share your thoughts based on tech",
+      "author": "Maryann Ifunanya Igwe"
+    },
+    {
+      "id": "67d8",
+      "title": "Create a blog",
+      "body": "You can write something educational or hacks to help other Techies.",
+      "author": "Maryann Ifunanya Igwe"
+    },
+    {
+      "id": "780a",
+      "title": "My Linkedin and GitHub",
+      "body": "Linkedin: Maryann Ifunanya Igwe\nGitHub: Maryann1980",
+      "author": "Maryann Ifunanya Igwe"
+    },
+    {
+      "id": "67d1",
+      "title": "Collaborations",
+      "body": "I'm open to paid collaborations, thank you. My gmail: igwemaryanneifunanya@gmail.com",
+      "author": "Maryann Ifunanya Igwe"
+    }
+  ]
+}
