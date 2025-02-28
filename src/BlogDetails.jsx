@@ -3,11 +3,11 @@ import useFetch from "./UseFetch";
 
 const BlogDetails = () => {
     const {id} = useParams();
-    const {data: blog, isPending, error} = useFetch('http://localhost:8000/blogs/' + id);
+    const {data: blog, isPending, error} = useFetch('https://techworld-production.up.railway.app/blogs/' + id);
     const history = useHistory();
 
     const handleClick = () => {
-        fetch('http://localhost:8000/blogs/' + blog.id, {
+        fetch('https://techworld-production.up.railway.app/blogs/' + blog.id, {
             method: 'DELETE'
         }).then(() => {
             history.push('/');

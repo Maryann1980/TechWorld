@@ -1,21 +1,31 @@
-import {Link} from 'react-router-dom'
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-// eslint-disable-next-line react/prop-types
-const BlogList = ({blogs, title}) =>{
-        return (
+const BlogList = ({ blogs, title }) => {
+    return (
         <div className="blog-list">
-             <h2>{title}</h2>
-               {blogs.map((blog) => (
-            <div className="blog-preview" key={blog.id}>
-                <Link to={`/blogs/${blog.id}`}>
-                <h2>{blog.title}</h2>
-                <p>Written by {blog.author}</p>
-                </Link>
-                
-            </div>
-           ))}
+            <h2>{title}</h2>
+            {blogs.map((blog) => (
+                <div className="blog-preview" key={blog.id}>
+                    <Link to={`/blogs/${blog.id}`}>
+                        <h2>{blog.title}</h2>
+                        <p>Written by {blog.author}</p>
+                    </Link>
+                </div>
+            ))}
         </div>
-    )
-}
+    );
+};
 
-export default BlogList
+BlogList.propTypes = {
+    blogs: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            title: PropTypes.string.isRequired,
+            author: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    title: PropTypes.string.isRequired,
+};
+
+export default BlogList;
